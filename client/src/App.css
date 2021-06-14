@@ -1,0 +1,139 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Anton', sans-serif;
+    font-size: 2vmin;
+    line-height: 1.6;
+    background-color: rgba(122, 114, 145, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-size: 5vmin;
+    font-weight: 800;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+button {
+    width:4vw;
+    height:5vh;
+    font-size: 2vmin;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0 0.14vw;
+    color: #ffffff;
+    background-color: rgba(182, 124, 142, 0.6);
+}
+
+button:hover {
+    color: #845b68;
+    background-color: #F4F6F7;
+}
+
+.floating-buttons{
+    position:absolute;
+    height: 6vh;
+    background-color: #845b68;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:1px;
+    z-index:1;
+}
+
+.container {
+    display:flex;
+    justify-content:center;
+}
+
+/* Graph */
+
+.graph-chart-container {
+    width:40vw;
+    height:70vh;
+    background-color: transparent;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+.input-date {
+    width: 20vw;
+    position:absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 1.5vh 0;
+    border-radius: 0.3rem;
+    color: rgb(56, 32, 55);
+    
+}
+
+.graph-board{
+    width: 34vw;
+    height: 60vh;
+    border-bottom: 2px solid #000;
+    margin: 3.125vw;
+    position: relative;
+}
+
+.graph-data{
+    position:static;
+}
+
+.graph-tooltiptext {
+visibility: hidden;
+background-color: rgb(105, 90, 114);
+color: #fff;
+text-align: center;
+border-radius: 4px;
+z-index: 1;
+}
+
+.graph-data:hover .graph-tooltiptext{
+visibility: visible;
+}
+
+/* Candlestick */
+
+.candle-chart-container {
+    height: 82vh;
+    background-color: transparent;
+    border: 1px solid #fff;
+    position:relative;
+}
+
+.candle-board{
+    width: 96vw;
+    height: 100%;
+    position: relative;
+    direction:rtl;
+}
+
+.candle-tooltiptext {
+    visibility: hidden;
+    width: 12vw;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin:-18vh -2vw;
+    z-index: 1;
+}
+  
+.candle-data:hover .candle-tooltiptext{
+    visibility: visible;
+}
